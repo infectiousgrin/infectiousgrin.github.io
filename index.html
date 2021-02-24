@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.80.0" />
+    <meta charset="utf-8">
+    <title>Infectious Grin</title>
+    <meta name="description" content="">
+    <meta name="author" content="Colin Milhench">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:;base64,iVBORw0KGgo=">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <style>
+      code {
+        background: inherit;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    
+<style>
+  .container{
+    min-width: 320px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+</style>
+  <script>
+  var css = '';
+  var primary = '#ea0000';
+
+  if (primary) {
+    var primaryD = darken(primary, -14);
+    var primaryL = darken(primary, 21);
+    css += ['',
+      'a { color: '+primary+'; }',
+      'a:hover { color: '+primaryD+'; }',
+      '',
+      'select:focus { border: 1px solid '+primaryL+'; outline: 0; }',
+      'input[type="email"]:focus,input[type="number"]:focus,input[type="search"]:focus,input[type="text"]:focus,input[type="tel"]:focus,input[type="url"]:focus,input[type="password"]:focus,textarea:focus,select:focus {border-color: '+primaryL+';}',
+      '',
+      '.button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {color: #FFF;background-color: '+primaryL+';border-color: '+primaryL+'; }',
+      '.button.button-primary:hover, button.button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover, .button.button-primary:focus, button.button-primary:focus, input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {color: #FFF;background-color: '+primaryD+'; border-color: '+primaryD+'; }',
+      ''
+    ].join('\n');
+  }
+  if (css.length > 0) {
+    var style = document.createElement('style');
+    style.appendChild(document.createTextNode(css));
+    document.body.appendChild(style);
+  }
+  function darken(col,amt) {
+    var prefix = false;
+    if ( col[0] == "#" ) {
+        col = col.slice(1);
+        prefix = true;
+    }
+    col = col.substring(0, 6);
+    var num = parseInt(col,16);
+
+    var r = (num >> 16) + amt;
+    if ( r > 255 ) r = 255;
+    else if  (r < 0) r = 0;
+
+    var g = ((num >> 8) & 0x00FF) + amt;
+    if ( g > 255 ) g = 255;
+    else if  (g < 0) g = 0;
+
+    var b = (num & 0x0000FF) + amt;
+    if ( b > 255 ) b = 255;
+    else if  ( b < 0 ) b = 0;
+    var string = "000000" + (b | (g << 8) | (r << 16)).toString(16);
+    return (prefix?"#":"") + string.substr(string.length-6);
+  }
+</script>
+<style>
+ header nav {
+   margin-right: 1.4em;
+ }
+ nav li {
+   margin-bottom: 0;
+ }
+</style>
+<header class="u-pull-right">
+  <nav class="row">
+    <div class="column">
+      <ul>
+      
+        <li style="display: inline;">
+          <a href="http://medium.com/@cmilhench" target="_blank" rel="nofollow">Blog</a>
+        </li>
+      
+        <li style="display: inline;">
+          <a href="http://twitter.com/#!/cmilhench" target="_blank" rel="nofollow">Twitter</a>
+        </li>
+      
+        <li style="display: inline;">
+          <a href="https://github.com/cmilhench" target="_blank" rel="nofollow">Github</a>
+        </li>
+      
+        <li style="display: inline;">
+          <a href="mailto:colin@infectiousgrin.com" target="_blank" rel="nofollow">Contact</a>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
+</header>
+    
+<main class="container">
+  <div class="row">
+    <div class="column">
+      <img src="/assets/logo-200.png" height="200">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <p>Hello, my name is Colin I&rsquo;m a designer and a nerd, I love working with iOS, Swift and Go; I adore solving hard problems.</p>
+<p>Here are some problems I solved earlier:</p>
+
+      </ul>
+    </div>
+  </div>
+  <nav class="row">
+    <div class="column">
+      <ul>
+      
+      
+        <li>
+          <a href="https://github.com/cmilhench/stretchy-headers" target="_blank" rel="nofollow">iOS Stretchy Headers</a>
+        </li>
+      
+        <li>
+          <a href="https://github.com/cmilhench/custom-transition-twitter" target="_blank" rel="nofollow">iOS Custom Loading Transition</a>
+        </li>
+      
+        <li>
+          <a href="https://medium.com/@cmilhench/games-html5-canvas-85ac2470eb2a" target="_blank" rel="nofollow">Game Loop – HTML5 Canvas Animation</a>
+        </li>
+      
+        <li>
+          <a href="https://medium.com/@cmilhench/spinner-loader-724c2e37768e" target="_blank" rel="nofollow">Loader – HTML5 Canvas Spinner</a>
+        </li>
+      
+        <li>
+          <a href="https://medium.com/@cmilhench/gravity-javascript-universe-505f9a5e4a85" target="_blank" rel="nofollow">Gravity – JavaScript Universe</a>
+        </li>
+      
+        <li>
+          <a href="https://medium.com/@cmilhench/ellipses-in-html5-e48808b77cac" target="_blank" rel="nofollow">Ellipse – HTML5 Canvas</a>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
+</main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-54009505-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>

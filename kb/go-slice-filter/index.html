@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+  How to remove items from a slice using Filter() &ndash; Infectious Grin
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="Colin Milhench">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:;base64,iVBORw0KGgo=">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <style>
+      code {
+        background: inherit;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+  <nav class="row">
+    <div class="column">
+      
+      <ul>
+        <li style="display: inline;">
+          <a href="/">Home</a>
+        </li>
+      
+        <li style="display: inline;" class="">
+          <a href="/article/" title="">Articles</a>
+        </li>
+      
+        <li style="display: inline;" class="">
+          <a href="/kb/" title="">Knowledge Base</a>
+        </li>
+      
+        <li style="display: inline;" class="">
+          <a href="/about/" title="">About</a>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
+</header>
+    
+<main class="container">
+  <div class="row">
+    <div class="column">
+      <p>Here is a <code>Filter</code> function for a slice of integer numbers. It goes over all
+the items in the slice and returns a new array containing items that pass a
+test you specify.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-style:italic">// Filter returns a new slice containing all strings in the slice that satisfy
+</span><span style="font-style:italic">// the predicate f.
+</span><span style="font-style:italic"></span><span style="font-weight:bold">func</span> Filter(vs []<span style="">int</span>, f <span style="font-weight:bold">func</span>(<span style="">int</span>) <span style="">bool</span>) []<span style="">int</span> {
+    vsf := make([]<span style="">string</span>, 0)
+    <span style="font-weight:bold">for</span> _, v := <span style="font-weight:bold">range</span> vs {
+        <span style="font-weight:bold">if</span> f(v) {
+            vsf = append(vsf, v)
+        }
+    }
+    <span style="font-weight:bold">return</span> vsf
+}
+</code></pre></div><p>For example, given the following slice:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">numbers := []<span style="">int</span>{1, 2, 4, 7, 9, 12, 13}
+</code></pre></div><p>We could use Filter() to create an array of all the numbers that are greater
+than or equal to 5:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">over5 := Filter(numbers, <span style="font-weight:bold">func</span>(v <span style="">int</span>) <span style="">bool</span> {
+  <span style="font-weight:bold">return</span> v &gt;= 5
+})
+</code></pre></div><p>Alternatively, we could use Filter() to find odd numbers using modulus:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">odd := Filter(numbers, <span style="font-weight:bold">func</span>(v <span style="">int</span>) <span style="">bool</span> {
+  <span style="font-weight:bold">return</span> v % 2 == 1
+})
+</code></pre></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <a href="javascript:history.back();">← Back</a>
+    </div>
+  </div>
+</main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-54009505-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>

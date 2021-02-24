@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Infectious Grin</title>
+    <link>/</link>
+    <description>Recent content in Home on Infectious Grin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to check whether an item exists in a slice using Index()</title>
+      <link>/kb/go-slice-index/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/kb/go-slice-index/</guid>
+      <description>Here is an Index function for a slice of integer numbers. It goes over all the items in the slice and returns the first matching index of the target.
+// Index returns the first index of the target string t, or -1 if no match is // found. func Index(vs []int, t int) int { for i, v := range vs { if v == t { return i } } return -1 } For example, given this slice:</description>
+    </item>
+    
+    <item>
+      <title>How to remove items from a slice using Filter()</title>
+      <link>/kb/go-slice-filter/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/kb/go-slice-filter/</guid>
+      <description>Here is a Filter function for a slice of integer numbers. It goes over all the items in the slice and returns a new array containing items that pass a test you specify.
+// Filter returns a new slice containing all strings in the slice that satisfy // the predicate f. func Filter(vs []int, f func(int) bool) []int { vsf := make([]string, 0) for _, v := range vs { if f(v) { vsf = append(vsf, v) } } return vsf } For example, given the following slice:</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Content for About page</description>
+    </item>
+    
+  </channel>
+</rss>
